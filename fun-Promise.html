@@ -1,0 +1,17 @@
+<script>
+    var GetApi=new Promise(function(resolve,reject){
+        var url=prompt("Enter Youtube URL");
+        if(url.toLowerCase()=="https://www.youtube.com/") {
+            resolve("Valid Url...");
+        }
+        else{
+            reject("In Valid Url...");
+        }
+    });
+    GetApi.then(function(res){
+        document.write(res);
+    })
+    .catch(function(exp){
+        document.write(exp);
+    })
+</script>

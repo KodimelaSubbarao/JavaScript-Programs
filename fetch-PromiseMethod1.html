@@ -1,0 +1,18 @@
+<script>
+    fetch("https://fakestoreapi.com/products")
+    .then(function(res){
+        return res.json();
+    })
+    .then(function(product){
+        Object.keys(product).map(function(key){
+            //var x=key.length;
+            document.write(product[key].price+"<br>");
+            document.write(product[key].title+"<br>");
+            document.write(product[key].description+"<br>");
+            document.write(product[key].image+"<br>");
+            document.write(product[key].category+"<br>");
+            document.write("<br>");
+        })
+        //document.write(product[0].price)
+    })
+</script>

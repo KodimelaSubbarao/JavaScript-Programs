@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         var ul
+        function bodyLoad()
+        {
+            ul=document.createElement("ul");
+            document.querySelector("body").appendChild(ul);
+        }
+        var techs=['All','Java','Sql','Html','Css','Javascript','Python','Spring','Spring Boot','React JS'];
+        function addItem(){
+            var a=1;
+            techs.map(function(tech){
+                if(a==1)
+                {
+                var li=document.createElement("li");
+                li.style.listStyle='none';
+                var input=document.createElement("input");
+                input.type='checkbox';
+                input.name="languages";
+                input.value=tech;
+                li.appendChild(input);
+                var label=document.createElement("label");
+                label.innerHTML=tech;
+                li.appendChild(label);
+                ul.appendChild(li);
+                a--;
+                }
+            })
+           
+
+           if(techs.length==0)
+           {
+                var c=confirm("These are data only available\n do yow want add the any language again click the button");
+                if(c==true){
+                    var add=prompt("enter the language name...");
+                    if(add)
+                    {
+                        techs.push(add);
+                        addItem();
+                    }
+                }
+           }
+           var r=techs.shift();
+        }
+    </script>
+</head>
+<body onload="bodyLoad()">
+    <button onclick="addItem()">LoadData</button>
+   
+</body>
+</html>

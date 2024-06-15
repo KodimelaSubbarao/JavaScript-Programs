@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>US Mobile verfiy Cation</title>
+    <script type="text/javascript">
+        function Phno()
+        {
+            var phno=document.getElementById("number").value;
+            var error=document.getElementById("error");
+            // var regExp="/\+\(1\)\(\d{3}\)\s \d{3}-\d{4}/";
+            var regExp = /\+\(1\)\(\d{3}\)\s\d{3}-\d{4}/;
+            if(phno.match(regExp))
+            {
+                error.innerHTML="Mobile Number Matched".fontcolor('green');
+            }
+            else{
+                error.innerHTML="Mobile Number Not Matched".fontcolor('red');
+            }
+        }
+    </script>
+</head>
+<body align="center" topmargin="100px">
+    <div>
+        
+        <dt>Verify Mobile Number</dt>
+          <form>
+            <dd> 
+                <input type="text" id="number"  name="phno" placeholder="eg: +(1)(457) 5678-3467" >
+           </dd>
+           <dd id="error"></dd>
+           <dd><input type="submit" onclick="Phno()"></dd>
+          </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<script>
+    //Spread parameter is also called as actual parameters
+    function spread(a,b,c,d)
+    {
+        document.writeln(a);
+        document.writeln(b);
+        document.writeln(c);
+        document.writeln(d);
+    }
+    var arr=[10,20,30,40];
+    //spread(...arr);
+
+    function spread1(...rest)
+    {
+        rest.map(function(r){
+            document.write(r+"<br>")
+        })
+    }
+    var all=["Ram",23,['java','sql','js'],{s:'a',raja:'rani',sai:'ntr'}];
+    spread1(...all);
+</script>

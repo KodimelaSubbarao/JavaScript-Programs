@@ -1,0 +1,19 @@
+<script>
+    //closure is a mechnism that allows the members of 
+    //          outer scope accessible to inner scope.
+    //Every function by default have a closure.
+    
+    function f1()
+    {
+        var x=10;
+        var y=20;
+        function f2()
+        {
+            var z=30;
+            return x+y+z;
+        }
+        document.write("Addition is : "+f2());
+    }
+    f1();
+
+</script>

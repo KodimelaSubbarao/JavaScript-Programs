@@ -1,0 +1,18 @@
+<script>
+    fetch("./p-JSON/fetch1.json")
+    .then(function(res){
+        return res.json();
+    })
+    .then(function(data){
+        Object.keys(data).map(function(s){
+            document.write(s+"    "+data[s]+"<br>");
+        })
+    })
+    .catch(function(ex){
+        document.write(ex);
+    })
+    .finally(function(){
+        document.write('completed');
+    })
+   
+</script>

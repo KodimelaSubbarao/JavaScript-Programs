@@ -1,0 +1,39 @@
+<script>
+    var date =new Date();
+    var weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thrusday", "Friday", "Staturday"];
+    var months = ["January", "Feb", "March","April","May","June","July","August"];
+    document.write(`
+        ${date.getDate()}-
+        ${months[date.getMonth()]}-
+        ${date.getFullYear()}<br> 
+        ${weekdays[date.getDay()]} 
+    `);
+    var hours=date.getHours();
+    var minutes=date.getMinutes();
+    var ampm=hours>=12 ? "AM" : "PM";
+    hours = hours % 12;
+    hours = hours ? hours : 12; 
+    minutes = minutes < 10 ? '0'+minutes : minutes;
+    var time = hours + ':' + minutes + ' ' + ampm;
+    document.write(time)
+</script>
+
+<!-- getHours()		It returns hour number 0 to 23
+	getMinutes()		It returns 0 to 59
+	getSeconds()		It returns 0 to 59
+	getMilliSeconds()	It returns 0 to 99
+	getDate()			It returns date number 1 to 31
+	getDay()			It returns weekday number 0 = Sunday
+	getMonth()		It returns month number 0 = January
+	getFullYear()		It returns 4 digits year number 
+	toLocaleDateString()
+	toLocaleTimeString()
+	toLocaleString()
+
+	setHours()	
+	setMinutes()
+	setSeconds()				=> to change date & time
+	setMilliSeconds()
+	setDate()
+	setMonth()
+	setYear() -->

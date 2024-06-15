@@ -1,0 +1,20 @@
+<script>
+    function f1()
+    {
+        var price=parseFloat(132.6323);
+    var qty=parseInt(14);
+    var total=price*qty;
+   document.getElementById("p").innerHTML=Math.round(total);
+    }
+</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="f1()">
+    <p id="p"style="color:red;"></p>
+</body>
+</html>

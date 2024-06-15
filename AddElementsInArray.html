@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1.push() ->add new elements in last index of the array 
+        // 2.unshift() ->add new elements in first index of the array 
+        // 3.splice(start index,deletecount,items) ->add the elements in paraticular position in array
+    
+        var arr=new Array("sa","ksr","ss");
+        function bodyLoad()
+        {
+            document.querySelector("p").innerHTML=arr.toString();
+        }
+        
+        function f1()
+        {
+            var enter=parseInt(prompt(`Choose Your Option   \n    1.Add element in Starting index of array \n
+        2.Add element in last index of array \n
+        3.Add element in particular index position of array \n` ));
+        if(enter==1)
+        {
+            var item=prompt('Enter any one or more items ')
+            arr.unshift(item);
+            document.querySelector("p").innerHTML=arr.toString();
+        }
+        else if(enter==2)
+        {
+            var item=prompt('Enter any one or more items ')
+            arr.push(item);
+            document.querySelector("p").innerHTML=arr.toString();
+        }
+        else if(enter==3){
+            var si=parseInt(prompt("Enter the particuler position value"));
+            var item=prompt('Enter any one or more items ')
+            arr.splice(si,0,item);
+            document.querySelector("p").innerHTML=arr.toString();
+        }
+        }
+    </script>
+</head>
+<body onload="bodyLoad()">
+    <p></p>
+    <button onclick="f1()">addItem</button>
+</body>
+</html>

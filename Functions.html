@@ -1,0 +1,37 @@
+<script>
+    //function expression
+    var msg=function(){document.write("Hello Subbu!<br>");}
+    function f1()
+    {
+        document.write("Hello SA!<br>");
+    }
+    // msg();
+    // f1();
+
+    function even(num){
+        for(var i=0;i<=num;i++)
+        {
+            if(i%2==0)
+            {
+                document.write(i+"<br>");
+            }
+        }
+    }
+    //even(15);
+
+    function demo(collections)
+    {
+        collections.map(function(val){
+            document.write(val+"<br>");
+        })
+    }
+    //demo([10,20,30,40,50]);
+
+    function demo1(Objects)
+    {
+        document.write(`
+        ${Objects.id}<br>${Objects.name}`);
+    }
+   // demo1({id:101,name:'SA'});
+
+</script>

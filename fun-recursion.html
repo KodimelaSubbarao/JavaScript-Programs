@@ -1,0 +1,11 @@
+<script>
+    function facto(n)
+    {
+        if(n==0)
+        return 1;
+        else
+        return n*facto(n-1);
+    }
+    var f=prompt("enter any number for finding factorial")
+    document.write("factorial of "+f+" nums : "+facto(f));
+</script>

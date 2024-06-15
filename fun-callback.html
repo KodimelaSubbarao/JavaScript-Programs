@@ -1,0 +1,15 @@
+<script>
+    function GetApi(url,success,failure)
+    {
+        if(url=="https://www.youtube.com/")
+        {
+            success();
+        }
+        else{
+            failure();
+        }
+    }
+    GetApi(prompt('Enter youtube Url '),
+    function(){document.write("Valid Address")},
+    function(){document.write("In Valid Address")})
+</script>

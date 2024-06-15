@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript refer in HTML elements using Name</title>
+    <script type="text/javascript">
+        function bodyOnload()
+        {
+            pic.src="/public/Imgs/ntr.jpg";
+            form1.btn1.value="Uname";
+            form2.btn2.value="Pword";
+        }
+    </script>
+</head>
+<body onload="bodyOnload()">
+    <div>
+        <img border="2" name="pic" width="150" height="120">
+    </div>
+    <div>
+        <form name="form1">
+            <h3>UserName</h3>
+            <input type="text">  <input type="button" name="btn1">
+        </form>
+    </div>
+    <div>
+        <form name="form2">
+            <h3>Password</h3>
+            <input type="password"> <input type="button" name="btn2">
+        </form>
+    </div>
+</body>
+</html>

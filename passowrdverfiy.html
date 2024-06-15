@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Password Verification Example</title>
+</head>
+<body>
+  <form id="myForm">
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password" oninput="verifyPasswords()">
+    <br>
+    <label for="confirmPassword">Confirm Password:</label>
+    <input type="password" name="confirmPassword" id="confirmPassword" oninput="verifyPasswords()">
+    <br>
+    <span id="passwordMatch"></span>
+  </form>
+
+  <script>
+    function verifyPasswords() {
+      var password = document.getElementById("password").value;
+      var confirmPassword = document.getElementById("confirmPassword").value;
+      var message = document.getElementById("passwordMatch");
+
+      if (password !== "" && confirmPassword !== "") {
+        if (password !== confirmPassword) {
+          message.textContent = "Passwords do not match!";
+        } else {
+          message.textContent = "Passwords match!";
+        }
+      } else {
+        message.textContent = ""; // Clear the message if any field is empty
+      }
+    }
+  </script>
+</body>
+</html>

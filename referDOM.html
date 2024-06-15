@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript refer in HTML elements using DOM</title>
+    <script type="text/javascript">
+        function bodyOnload()
+        {
+            window.document.images[0].src="/public/Imgs/ntr.jpg";
+            window.document.forms[0].elements[1].value="Uname";
+            window.document.forms[1].elements[1].value="Pword";
+        }
+    </script>
+</head>
+<body onload="bodyOnload()">
+    <div>
+        <img border="2" width="150" height="120">
+    </div>
+    <div>
+        <form>
+            <h3>UserName</h3>
+            <input type="text">  <input type="button">
+        </form>
+    </div>
+    <div>
+        <form>
+            <h3>Password</h3>
+            <input type="password"> <input type="button">
+        </form>
+    </div>
+</body>
+</html>

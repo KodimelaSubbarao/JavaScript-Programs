@@ -1,0 +1,42 @@
+<script>
+    function add(...arr)
+    {
+        var sum=0;
+        arr.map(function(val){
+            sum +=parseInt(val);
+        })
+        return sum;
+    }
+    function print()
+    {
+        document.write("Addition = "+add(10,20,30,40,50));
+    }
+   // print();
+
+   function verify(pword)
+   {
+        if(pword.toLowerCase()==="sa123")
+        {
+            return "Valid Password";
+        }
+        else
+        {
+            return "In Valid Password";
+        }
+   }
+  // document.write(verify("SA123"));
+
+  
+  function verify1(pword)
+   {
+        if(pword.toLowerCase()==="sa123")
+        {
+            return function(){document.write("Login Success")}
+        }
+        else
+        {
+            return function(){document.write("Login Failed")}
+        }
+   }
+   verify1(prompt("Enter Your Password"))();
+</script>

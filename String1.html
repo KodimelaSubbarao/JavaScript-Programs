@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function verifyChar()
+        {
+            var name=document.getElementById("uname").value;
+            var error=document.getElementById("uerror");
+            // document.write(name.charAt(0));
+            if(name.charAt(0)==name.charAt(0).toUpperCase())
+            {
+                error.innerHTML="";
+            }
+            else{
+                error.innerHTML="Fisrt Charcter must be capital".fontcolor('red');
+            }
+        }
+        function Char1()
+        {
+            var name=document.getElementById("uname").value;
+            var error=document.getElementById("uerror");
+            if(name.length<4)
+            {
+                error.innerHTML="name must be 4 or more chars".fontcolor('red');
+            }
+            else{
+                error.innerHTML="";
+            }
+        }
+    </script>
+</head>
+<body>
+    <dl>
+        <dt>Enter User Name</dt>
+        <dd><input type="text" id="uname" onblur="verifyChar()" onkeyup="Char1()"></dd>
+        <dd id="uerror"></dd>
+    </dl>
+</body>
+</html>

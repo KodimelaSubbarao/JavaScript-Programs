@@ -1,0 +1,27 @@
+<script>
+//Rest Parameter is also called Formal Parameter
+
+    function rest(...params){
+        params.map(function(p){
+            document.write(p+"<br>");
+        })
+    }
+    //rest(10,20,30,40,50);
+
+    function rest1(id,name,...marks){
+        document.write(`
+            ID : ${id}<br>
+            Name : ${name}<br>
+            Marks :
+        `);
+        marks.map(function(mark){
+            document.write(mark+"\t");
+        })
+        var total=0;
+        marks.forEach(m => {
+            total+=m;
+        });
+        document.write("<br>Total Marks : "+total);
+    }
+    rest1("Y19ACS479","subbu",87,89,97,83,79.90);
+</script>

@@ -1,0 +1,17 @@
+<script>
+    var add=(a,b)=>a+b;
+    document.write(add(10,100)+"<br><br>");
+
+    fetch("http://fakestoreapi.com/products")
+    .then(res=>res.json())
+    .then(data=>{
+        data.map(d=>{document.writeln(`${d.id} &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        ${d.title} &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        ${d.price}  &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        ${d.category}  &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        ${d.image}  &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        ${d.rating.rate}  &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        ${d.description}
+        <br><br>`)})
+    })
+</script>

@@ -1,0 +1,59 @@
+<script>
+    function f1()
+    {
+        var names=["sa","ram","raj","anu",'ksr'];
+        document.write(names.toString()+"<br>");
+        document.write(names.toLocaleString());
+    }
+    function f2()
+    {
+        var names=["sa","ram","raj","anu",'ksr'];
+        document.write(names.join("-->")+"<br>");
+        document.write(names.join("  ")+"<br>");
+        document.write(names.join("<<>>")+"<br>");
+    }
+    function f3()
+    {
+        var names=["sa","ram","raj","anu",'ksr'];
+        document.write(names.slice(1,4)+"<br>");
+        
+    }
+    function f4()
+    {
+        var names=["sa","ram","raj","anu",'ksr'];
+        names.map(function(name){
+        document.write(name+"<br>");
+       }); 
+    }
+    function f5()
+    {
+        var names=["sa","ram","raj","anu",'ksr'];
+        names.forEach(function(name,index){
+        document.write(name+" "+index+"<br>");
+       }); 
+    }
+    //f5();
+    var values=[1000,2000,3000,4000,5000,6000];
+    function f6()
+    {
+        var value=values.find(function(val){
+            return val>3000;
+        });
+        document.write(value);
+    }
+    function f7()
+    {
+        var value=values.filter(function(val){
+            return val>3000;
+        });
+        document.write(value);
+    }
+    function f8()
+    {
+        var value=values.reduce(function(val1,val2){
+            return val1+val2;
+        });
+        document.write(value);
+    }
+    f8();
+</script>
